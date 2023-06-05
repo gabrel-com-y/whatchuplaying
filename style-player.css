@@ -1,0 +1,545 @@
+body {
+    font-family: 'Courier Prime', monospace;
+    text-align: center;
+    color: #57C5B6;
+    background-color: #002B5B;
+    overflow: auto;
+    min-height: 200%;
+    min-width: 100%;
+}
+header {
+    color: #000;
+    font-family: 'Courier Prime', monospace;
+    background-color: #57C5B6;
+    margin: 0% 5%;
+    padding: 1%;
+}
+h1 a {
+    text-decoration: none!important;
+    color: #000!important;
+}
+header h1 {
+    font-size: 60px;
+    font-style: oblique;
+    margin: 0;
+    text-decoration: none;
+}
+header h2 {
+    font-size: 45px;
+    margin: 0;
+    border: 2px solid black;
+}
+h6 {
+    margin: 10px;
+    height: fit-content;
+    font-size: 30px;
+    color: #002B5B;
+    border: 2px solid red;
+}
+
+
+
+main {
+    display: block;
+
+}
+#boxes {
+    display: block;
+}
+
+form {
+    background-color: #57C5B6;
+    font-size: 40px;
+}
+.boxess {
+    margin: 1%;
+    display: block;
+    width: 50%;
+}
+#main-form {
+    display: inline-block;
+    padding: 10px; 
+    width: 60%;
+    padding-bottom: 20px;
+    color: #002B5B;
+}
+
+label {
+    color:#002B5B;
+    font-size: 30px;
+    cursor: text;
+}
+/*-----------------------INFO SUS---------------------------*/
+sup {
+    font-size: 20px;
+    color: red;
+}
+sup:hover {
+    color: black;
+    cursor: pointer;
+}
+div#susP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this is a _demo_ container. remember the importance of relative and absolute positioning */
+.tooltip-container {
+    position: relative;
+    display: block;
+    place-content: center;
+}
+/* styling of the tooltip display */
+p#tooltip-text {
+    display: none;
+    position: absolute;
+    top: -120px;
+    left: -200%;
+    z-index: 1;
+    background: rgb(26, 95, 122);
+    padding: 8px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 2px;
+    /* animation: fadeIn 0.6s; */
+}
+
+/* optional styling to add a "wedge" to the tooltip */
+p#tooltip-text:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border: 8px solid transparent;
+    border-top: 8px solid red;
+  }
+  
+  /* @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+  } */
+
+
+/*---------------------------------------------------*/
+button {
+    font-size: 30px;
+    margin: 0;
+    color: #57C5B6;
+    background-color: #002B5B;
+}
+button:hover {
+    color: #002B5B;
+    background-color: #57C5B6;
+}
+select {
+    font-size: 25px;
+    cursor: pointer;
+    color: #57C5B6;
+    background-color: #1A5F7A;
+    text-align: center;
+}
+select#mainChord {
+    background-color: #002B5B;
+    font-size: 25px;
+}
+select:hover{
+    color: #57C5B6;
+    background-color: #002B5B;
+}
+input#minor {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+form p {
+    font-size: 50px;
+    margin: 0;
+    border: 2px solid red;
+    padding: 0;
+}
+.hidden {
+    display: none;
+}
+.funct {
+    display: block;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    
+    /* font-size: 20px; */
+}
+#removeSection {
+    display: none;
+}
+
+#chordUpdt {
+    display: flex;
+    justify-content: center;
+}
+.regularP {
+    border: none;
+    font-size: 70%;
+    /* text-decoration: underline red; */
+}
+#update {
+    font-size: 80%;
+    border: 2px solid grey;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#clearBtn {
+    font-size: 20px;
+    background-color: red;
+    margin: 0;
+}
+
+#creator {
+    height: max-content;
+    display: inline-block;
+    background-color: #57C5B6;
+    align-items:center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+#nextPage {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 20px;
+}
+a#chordTriad {
+    background-color: #002B5B;
+    color: #57C5B6;
+    cursor: pointer;    
+    border: 1px solid gray;
+}
+a#chordTriad:hover {
+    color: #002B5B;
+    background-color: #57C5B6;
+}
+
+
+main a {
+    font-size: 30px;
+    text-decoration: none;
+    padding: 0 10px;
+    color: #57C5B6;
+    background-color: #002B5B;
+}
+main a:hover {
+    color: #002B5B;
+    background-color: #57C5B6;
+}
+a#finCh {
+    background-color: #002B5B;
+    color: #57C5B6;
+    font-size: 50px;   
+    margin: 30px 0;
+    cursor: pointer;
+}
+a#finCh:hover {
+    color: #002B5B;
+    background-color: #57C5B6;
+    border: 1px solid gray;
+}
+.onClicks {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+#labels {
+    font-size: 300%;
+    color: black;
+    /* text-decoration: underline dotted red; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+#labels p {
+    margin: 1%;
+}
+
+
+
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-top: 10px;
+}
+.board #chords-div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    color: black;
+    background-color: #57C5B6;
+}
+.board p {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0%;
+}
+.notes {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    overflow-x: auto;
+}
+.written {
+    white-space: nowrap;
+    overflow-x: auto;
+    font-size: 50px;
+    display: none;
+}
+
+
+
+/* --------------------------TABLE-------------------------- */
+
+table {
+    margin: 10px;
+    min-width: 1300px;
+    background-color: #0f0;
+    border-collapse: separate!important;
+    border-spacing: 2px!important;
+}
+thead {
+    background-color: #678;
+    color: #57C5B6;
+    width: 100%;
+    margin: 0;
+}
+.first {
+    background-color: #678;
+}
+.fretsCl {
+    color: black;
+}
+.one {
+    background-color: #00a;
+}
+.other {
+    background-color: #007;
+}
+th {
+    width: 100px;
+    text-align: center!important;
+}
+td {
+    background-color: #007;
+    color: #57C5B6;
+}
+.first {
+    background-color: #1A5F7A;
+}
+/* --------------------------TABLES-------------------------- */
+
+#back-button-butt {
+    border: none;
+    top: 0;
+    left: 0;
+}
+#back-button {
+    border: 2px solid #0af;
+    background-color: #000;
+    /* font-size: 20px; */
+    height: 50px;
+    padding: 2px 3px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+/* --------------------------Sizes-------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 40px;
+    }
+    header h2 {
+        font-size: 25px;
+    }
+    h6 {
+        font-size: 25px;
+    }
+    #back-button {
+        height: 30px;
+    }
+    #boxes {
+        margin: 2% 0;
+        display: block;
+        justify-content: center;
+    }
+    .boxess {
+        display: block;
+        margin: 1% 0;
+        padding: 0;
+    }
+    #main-form {
+        padding: 10px; 
+        display: inline-block;
+        width: 80%;
+        justify-content: center;
+    }
+    label {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+    #labels {
+        font-size: 200%;
+    }
+    select {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+    select#mainChord {
+        font-size: 20px;
+    }
+    a#finCh {
+        font-size: 20px;
+    }
+    #creator {
+        display: inline-block;
+        width: 50%;
+    }
+    form#nextPage {
+        display: inline-block;
+        width: 80%;
+    }
+    a#chordTriad {
+        font-size: 20px;
+    }
+} 
+@media only screen and (max-width: 765px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header h2 {
+        font-size: 20px;
+    }
+    h6 {
+        font-size: 20px;
+    }
+    #main-form {
+        padding: 5px; 
+        width: 75%;
+    }
+    #back-button {
+        left: 0;
+        top: 80px;
+        font-size: 15px;
+    }
+    #update {
+        display: inline-block;
+    }
+    #labels {
+        font-size: 150%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #back-button {
+        height: 20px;
+    }
+}
+
+
+
+
+
+.btn-primary {
+    color: #1A5F7A!important;
+    background-color: #57C5B6!important;
+    text-shadow: none;
+    margin: 0 0 10%;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid tr;
+    border-radius: 10px;
+  }
+.butnn {
+    width: 10px;
+    height: 5px;
+    margin: 5px;
+}
+.aClass .bigone {
+    font-size: 30px!important;
+    color: #1A5F7A!important;
+    background-color: #57C5B6!important;
+    text-shadow: none;
+    margin: 0 0 30px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid tr;
+    border-radius: 10px;
+}
+.chords { 
+    white-space: nowrap;
+    background-color: #57C5B6;
+    background-size: cover;
+    font-family: 'Courier Prime', monospace;
+    color: green;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+
+/*
+.btn-primary{
+    color:#fff;
+    background-color:#337ab7;
+    border-color:#2e6da4
+}
+.btn-primary.focus,.btn-primary:focus{
+    color:#fff;
+    background-color:#286090;
+    border-color:#122b40
+}
+.btn-primary:hover{
+    color:#fff;
+    background-color:#286090;
+    border-color:#204d74
+}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{
+    color:#fff;
+    background-color:#286090;
+    border-color:#204d74
+}
+.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover{
+    color:#fff;
+    background-color:#204d74;
+    border-color:#122b40
+}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{
+    background-image:none
+}
+.btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] 
+.btn-primary.focus,fieldset[disabled] 
+.btn-primary:focus,fieldset[disabled] 
+.btn-primary:hover{background-color:#337ab7;border-color:#2e6da4}
+.btn-primary .badge{color:#337ab7;background-color:#fff}
+.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}
+*/

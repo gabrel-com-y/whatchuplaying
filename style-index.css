@@ -1,0 +1,246 @@
+html {
+    min-height: 98%;
+}
+body {
+    font-family: 'Courier Prime', monospace;
+    text-align: center;
+    color: #0f0;
+    /* background: linear-gradient(#002B5B, #57C5B6, #002B5B); */
+    background-color: #002B5B;
+    font-size: 100px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: 'Courier Prime', monospace;
+    background-color: #57C5B6;
+    margin: 2%;
+}
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    margin: 0;
+    font-style: oblique;
+}
+header h2 {
+    font-size: 30px;
+    padding: 0 1% 1%;
+    border: 2px solid #000;
+    margin: 1%;
+    align-items: center;
+}
+
+
+main {
+    width: 100%;
+    display: block;
+}
+div {
+    background-color: rgba(0, 0, 0, 20%);
+    background-size: cover;
+    font-family: 'Courier Prime', monospace;
+    color: #051;
+    font-size: 20px;
+    margin: 0 1%;
+    align-items: center;
+}
+#chDef {
+    font-size: 30%;
+    padding: 1% 1%;
+    background-color: #57C5B6;
+    
+    border: 3px solid #1A5F7A;
+    border-radius: 5px;
+}
+nav p {
+    font-size: 150%;
+    color: #002B5B;
+    margin: 0;
+    padding: 0;
+}
+div#button-ch {
+    display: flex;
+    background-color: transparent;
+    /* align-items: center; */
+    padding: 0;
+}
+.btn-primary {
+    color: #57C5B6!important;
+    background-color: #1A5F7A!important;
+    height: 75%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid white;
+    border-radius: 5px;
+    display: flex;
+    font-size: 200%;
+}
+.btn-primary:hover {
+    color: #57C5B6!important;
+    background-color: #000!important;
+}
+a {
+    color: #002B5B;
+    /* background-color: rgba(0, 0, 0, 20%); */
+}
+
+#chord-sec {
+    margin-top: 3%;
+    color: #002B5B;
+    background-color: #57C5B6;
+    border: 3px solid #1A5F7A;
+}
+#fret-title {
+    padding: 1% 5%;
+    margin: 0;
+    font-size: 200%;
+}
+p#frets {
+    color: #57C5B6;
+    margin-bottom: 7px;
+}
+
+
+
+table {
+    margin: 10px;
+    min-width: 1000px;
+
+}
+thead {
+    background-color: #678;
+    color: #57C5B6;
+}
+th {
+    width: 100px;
+}
+td {
+    background-color: #007;
+    color: #57C5B6;
+}
+.first {
+    background-color: #678;
+}
+.fretsCl {
+    background-color: black;
+}
+.one {
+    background-color: #007;
+}
+.other {
+    background-color: #00a;
+}
+
+
+
+
+.notes {
+    background-color: #57C5B6;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.notes p {
+    padding-top: 2px;
+    color: #199;
+}
+
+.button-list {
+    text-align: center;
+}
+ul {
+    align-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #678;
+    width: min-content;
+
+}
+li {
+    list-style: none;
+
+}
+
+#v2 {
+    color: red;
+}
+
+@media only screen and (min-width:1000px) {
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    #button-ch {
+        width: 30%;
+    }
+    hr {display: none;}
+}
+
+@media only screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 40px;
+    }
+    header h2 {
+        font-size: 25px;
+    }
+    hr {
+        padding: 0;
+        margin: 3%;
+    }
+    #chDef {
+        font-size: 30%;
+    }
+    
+    .btn-primary {
+        padding: 3%;
+        height: 10%;
+        font-size: 200%;
+    }
+    #fret-title {
+        font-size: 160%;
+    }
+
+}  
+
+@media only screen and (max-width: 850px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header h2 {
+        font-size: 20px;
+    }
+    hr {
+        margin: 0;
+        display: none;
+    }
+    #chDef {
+        padding: 5% 5%;
+        font-size: 20%;
+    }
+    #button-ch {
+        margin: 5%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .btn-primary {
+        padding: 3% 5%;
+        font-size: 150%;
+    }
+    #fret-title {
+        font-size: 100%;
+    }
+}
+
+
+

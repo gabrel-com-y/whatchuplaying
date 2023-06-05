@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style-player.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon" href="icon.ico">
+    <title>Whatchu Playing? - Maker</title>
+</head>
+<body>
+    
+    <header>
+        <h1 id="title" ><a href="/index.html">Whatchu Playing?</a></h1>
+        <h2>Build your desired chord:</h2>
+    </header>
+    <div>
+        <a id="back-button-butt" href="index.html">
+            <img src="arrow.png" id="back-button">
+        </a>
+    </div>
+    <main>
+        <div id="boxes">
+            <form id="main-form" class="forms boxess">
+                <h6>1- Choose from the Dropdowns:</h6>
+                <div id="selects">
+                    <label for="mainChord">Root</label>
+                    <select id="mainChord" onchange="MakeCh()" onclick="MakeCh()">
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select><br>
+                    <label for="changes">Sharp or Flat</label>
+                    <select id="changes" onchange="MakeCh()">
+                        <option value="none"></option>
+                        <option value="#" >Sharp</option>
+                        <option value="b" >Flat</option>
+                    </select>
+                    <br>
+                    <label for="minor" >Minor</label>
+                    <input type="checkbox" id="minor" onchange="MakeCh()" >
+                    <br>
+                    <div id="susP">
+                        <label for="suspended">Suspended</label>
+                        <div class="tooltip-container">
+                            <sup><span id="tooltip-button" onclick="alertSus()">&#9432;</span></sup>
+                            <p id="tooltip-text">The chord cannot be suspended AND minor</p>
+                            <!-- <button id="tooltip-button">&#9432;</button> -->
+                        </div>
+                        <select id="suspended"  onchange="MakeCh()">
+                            <option value="none"></option>
+                            <option value="2">Sus2</option>
+                            <option value="4">Sus4</option>
+                        </select><br>
+                    </div>
+                    <label for="number">Add degree</label>
+                    <select id="number"  onchange="MakeCh()">
+                        <option value="none"></option>
+                        <option value="2">Add2</option>
+                        <option value="2M">Add2M</option>
+                        <option value="4">Add4J</option>
+                        <option value="4M">Add4A(5D)</option>
+                        <option value="6">Add6m(5A)</option>
+                        <option value="6M">Add6M</option>
+                        <option value="7">Add7</option>
+                        <option value="7M">Add7M</option>
+                        <option value="9">Add9</option>
+                        <option value="9M">Add9M</option>
+                    </select><br>
+                    <div id="xtraAdd" class="hidden">
+                        <label for="number2">Add degree (+1)</label>
+                        <select id="number2"  onchange="MakeCh()">
+                            <option value="none"></option>
+                            <option value="2">Add2</option>
+                            <option value="2M">Add2M</option>
+                            <option value="4">Add4J</option>
+                            <option value="4M">Add4A(5D)</option>
+                            <option value="6">Add6m(5A)</option>
+                            <option value="6M">Add6M</option>
+                            <option value="7">Add7</option>
+                            <option value="7M">Add7M</option>
+                            <option value="9">Add9</option>
+                            <option value="9M">Add9M</option>
+                        </select>
+                    </div>
+                    <div id="xtraAdd2" class="hidden">
+                        <label for="number3">Add degree (+1)</label>
+                        <select id="number3"  onchange="MakeCh()">
+                            <option value="none"></option>
+                            <option value="2">Add2</option>
+                            <option value="2M">Add2M</option>
+                            <option value="4">Add4J</option>
+                            <option value="4M">Add4A(5D)</option>
+                            <option value="6">Add6m(5A)</option>
+                            <option value="6M">Add6M</option>
+                            <option value="7">Add7</option>
+                            <option value="7M">Add7M</option>
+                            <option value="9">Add9</option>
+                            <option value="9M">Add9M</option>
+                        </select>
+                    </div>
+                    <button type="button" id="removeSection" class="funct" onclick="removeSect()" >-</button>
+                    <button type="button"  id="addSection" class="funct" onclick="showXtra()">+</button>
+                    <label for="bassNote">Bass note</label>
+                    <select name="bassNote" id="bassNote"  onchange="MakeCh()">
+                        <option value="same"></option>
+                        <option value="C">C</option>
+                        <option value="C#">C#</option>
+                        <option value="D">D</option>
+                        <option value="D#">D#</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="F#">F#</option>
+                        <option value="G">G</option>
+                        <option value="G#">G#</option>
+                        <option value="A">A</option>
+                        <option value="A#">A#</option>
+                        <option value="B">B</option>
+                    </select>
+                </div>
+                <p id="finCh">Chord</p>
+                <div id="chordUpdt">
+                    <!-- <p class="regularP">Update value:</p>    -->
+                    <button type="button" class="onClicks">
+                        <a id="update" onclick="canI()">Update Chord</a>
+                    </button>
+                </div>
+                <button type="button" id="clearBtn" onclick="reloadPage()">Clear</button>
+            </form>
+            <!-- --------------------------------- -->
+            <form id="nextPage" action="print.html" method="POST" class="boxess">
+                <h6>2- The chord's notes:</h6>
+                <button type="button" class="onClicks">
+                    <a id="chordTriad" onclick="canI2()">THE CHORDS</a>
+                </button>
+            </form>
+            
+        </div>
+        <section id="showChord">
+            <div id="labels">
+                <p id="bass" style="background-color: red; color:white">Root</p>
+                <p id="middle" style="background-color: #fe4848">Third</p>
+                <p id="fifth" style="background-color: #ff7979">Fifth</p>
+                <p id="added" style="background-color: orange">Others</p>
+            </div>
+
+            <div class="board">
+
+                <div class="notes written">
+                    <p id="frets">- |___1___|___2___|___3___|___4___|___5___|___6___|___7___|___8___|___9___|___10__|___11__|___12__| -</p><br>
+                    <p id="sixth-st">E |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                    <p id="fifth-st">B |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                    <p id="fourth-st">G |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                    <p id="third-st">D |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                    <p id="second-st">A |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                    <p id="first-st">E |___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___|___-___| -</p>
+                </div>
+                <section class="notes">
+                    <table>
+                        <thead>
+                            <th class="fretsCl">Frets</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th class="fretsCl">12</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="E" class="first E">E</td>
+                                <td id="F" class="other F">F</td>
+                                <td id="F2" class="one F#">F#</td>
+                                <td id="G" class="other G">G</td>
+                                <td id="G2" class="one G#">G#</td>
+                                <td id="A" class="other A">A</td>
+                                <td id="A2" class="one A#">A#</td>
+                                <td id="B" class="other B">B</td>
+                                <td id="C" class="one C">C</td>
+                                <td id="C2" class="other C#">C#</td>
+                                <td id="D" class="one D">D</td>
+                                <td id="D2" class="other D#">D#</td>
+                                <td id="E" class="first E">E</td>
+                            </tr>
+                            <tr>
+                                <td id="B" class="first">B</td>
+                                <td id="C" class="other">C</td>
+                                <td id="C2" class="one">C#</td>
+                                <td id="D" class="other">D</td>
+                                <td id="D2" class="one">D#</td>
+                                <td id="E" class="other">E</td>
+                                <td id="F" class="one">F</td>
+                                <td id="F2" class="other">F#</td>
+                                <td id="G" class="one">G</td>
+                                <td id="G2" class="other">G#</td>
+                                <td id="A" class="one">A</td>
+                                <td id="A2" class="other">A#</td>
+                                <td id="B" class="first">B</td>
+                            </tr>
+                            <tr>
+                                <td id="G" class="first">G</td>
+                                <td id="G2" class="other">G#</td>
+                                <td id="A" class="one">A</td>
+                                <td id="A2" class="other">A#</td>
+                                <td id="B" class="one">B</td>
+                                <td id="C" class="other">C</td>
+                                <td id="C2" class="one">C#</td>
+                                <td id="D" class="other">D</td>
+                                <td id="D2" class="one">D#</td>
+                                <td id="E" class="other">E</td>
+                                <td id="F" class="one">F</td>
+                                <td id="F2" class="other">F#</td>
+                                <td id="G" class="first">G</td>
+                            </tr>
+                            <tr>
+                                <td id="D" class="first">D</td>
+                                <td id="D2" class="other">D#</td>
+                                <td id="E" class="one">E</td>
+                                <td id="F" class="other">F</td>
+                                <td id="F2" class="one">F#</td>
+                                <td id="G" class="other">G</td>
+                                <td id="G2" class="one">G#</td>
+                                <td id="A" class="other">A</td>
+                                <td id="A2" class="one">A#</td>
+                                <td id="B" class="other">B</td>
+                                <td id="C" class="one">C</td>
+                                <td id="C2" class="other">C#</td>
+                                <td id="D" class="first">D</td>
+                            </tr>
+                            <tr>
+                                <td id="A" class="first">A</td>
+                                <td id="A2" class="other">A#</td>
+                                <td id="B" class="one">B</td>
+                                <td id="C" class="other">C</td>
+                                <td id="C2" class="one">C#</td>
+                                <td id="D" class="other">D</td>
+                                <td id="D2" class="one">D#</td>
+                                <td id="E" class="other">E</td>
+                                <td id="F" class="one">F</td>
+                                <td id="F2" class="other">F#</td>
+                                <td id="G" class="one">G</td>
+                                <td id="G2" class="other">G#</td>
+                                <td id="A" class="first">A</td>
+                            </tr>
+                            <tr>
+                                <td id="E" class="first E">E</td>
+                                <td id="F" class="other F">F</td>
+                                <td id="F2" class="one F#">F#</td>
+                                <td id="G" class="other G">G</td>
+                                <td id="G2" class="one G#">G#</td>
+                                <td id="A" class="other A">A</td>
+                                <td id="A2" class="one A#">A#</td>
+                                <td id="B" class="other B">B</td>
+                                <td id="C" class="one C">C</td>
+                                <td id="C2" class="other C#">C#</td>
+                                <td id="D" class="one D">D</td>
+                                <td id="D2" class="other D#">D#</td>
+                                <td id="E" class="first E">E</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script type="text/javascript" src="table2.js"></script>
+</html>
